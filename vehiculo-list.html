@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<div class="container">
+    <h2>Lista de Vehículos</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Placa</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Capacidad de Carga</th>
+                <th>Tipo de Carrocería</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="vehiculo in vehiculos">
+                <td>{{vehiculo.id}}</td>
+                <td>{{ vehiculo.placa }}</td>
+                <td>{{ vehiculo.marca }}</td>
+                <td>{{ vehiculo.modelo }}</td>
+                <td>{{ vehiculo.capacidadCarga }}</td>
+                <td>{{ vehiculo.tipoCarroceria }}</td>
+                <td>
+                    <button class="btn btn-sm btn-primary" ng-click="editVehiculo(vehiculo)">Editar</button>
+                    <button class="btn btn-sm btn-danger" ng-click="deleteVehiculo(vehiculo.id)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

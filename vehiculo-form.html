@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<div class="container">
+    <h2>Agregar Vehículo</h2>
+    <form ng-submit="addVehiculo()">
+        <div class="form-group">
+            <label for="placa">Placa:</label>
+            <input type="text" class="form-control" id="placa" ng-model="vehiculo.placa" required>
+        </div>
+        <div class="form-group">
+            <label for="marca">Marca:</label>
+            <input type="text" class="form-control" id="marca" ng-model="vehiculo.marca" required>
+        </div>
+        <div class="form-group">
+            <label for="modelo">Modelo:</label>
+            <input type="text" class="form-control" id="modelo" ng-model="vehiculo.modelo" required>
+        </div>
+        <div class="form-group">
+            <label for="capacidadCarga">Capacidad de Carga:</label>
+            <input type="text" class="form-control" id="capacidadCarga" ng-model="vehiculo.capacidadCarga" required>
+        </div>
+        <div class="form-group">
+            <label for="tipoCarroceria">Tipo de Carrocería:</label>
+            <input type="text" class="form-control" id="tipoCarroceria" ng-model="vehiculo.tipoCarroceria" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar Vehículo</button>
+    </form>
+</div>
+

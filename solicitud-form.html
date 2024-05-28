@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<h2 class="form-title">Añadir Nueva Solicitud</h2>
+<form ng-submit="addSolicitud()">
+    <div class="form-group">
+        <label>Fecha:</label>
+        <input type="text" ng-model="newSolicitud.fecha" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label>Propietario:</label>
+        <input type="text" ng-model="newSolicitud.propietarioCarga" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label>Origen:</label>
+        <input type="text" ng-model="newSolicitud.origen" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label>Destino:</label>
+        <input type="text" ng-model="newSolicitud.destino" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label>Dimensiones:</label>
+        <input type="text" ng-model="newSolicitud.dimensiones" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label>Peso:</label>
+        <input type="number" ng-model="newSolicitud.peso" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label>Valor Asegurado:</label>
+        <input type="number" ng-model="newSolicitud.valorAsegurado" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label>Empaque:</label>
+        <input type="text" ng-model="newSolicitud.empaque" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Añadir Solicitud</button>
+</form>
+

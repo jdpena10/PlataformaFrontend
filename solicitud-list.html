@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<h2 class="form-title">Lista de todas las Solicitudes</h2>
+<div class="panel panel-default">
+    <div class="panel-heading">Solicitudes</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Fecha</th>
+                <th>Propietario</th>
+                <th>Origen</th>
+                <th>Destino</th>
+                <th>Dimensiones</th>
+                <th>Peso</th>
+                <th>Valor Asegurado</th>
+                <th>Empaque</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="solicitud in solicitudes | orderBy: 'id'">
+                <td>{{solicitud.id}}</td>
+                <td>{{solicitud.fecha}}</td>
+                <td>{{solicitud.propietarioCarga}}</td>
+                <td>{{solicitud.origen}}</td>
+                <td>{{solicitud.destino}}</td>
+                <td>{{solicitud.dimensiones}}</td>
+                <td>{{solicitud.peso}}</td>
+                <td>{{solicitud.valorAsegurado}}</td>
+                <td>{{solicitud.empaque}}</td>
+                <td>
+                    <button class="btn btn-sm btn-primary" ng-click="editSolicitud(solicitud)">Editar</button>
+                    <button class="btn btn-sm btn-danger" ng-click="deleteSolicitud(solicitud.id)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
